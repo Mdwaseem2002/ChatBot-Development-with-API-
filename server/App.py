@@ -13,7 +13,7 @@ CORS(app)
 load_dotenv(find_dotenv())
 
 # Set the API key
-api_key = os.environ.get('AIzaSyDFyUhDz-TL8DqpWtHit9Ad2cKL-KzxG5Y')
+api_key = os.environ.get('API KEY')
 
 # Set the API endpoint
 endpoint = "https://generativelanguage.googleapis.com/v1beta"
@@ -31,7 +31,7 @@ def generate_content():
 
         chat_conversation = data["text"]
 
-        prompt = f"This is a chat conversation between a user and a chatbot. Design test scenarios and list comprehensive test cases for such a converstaion to identify errors and evaluate response. Please use the relevant chatbot testing guidelines. Please give the output in a properly formatted markdown. The conversation is given here {chat_conversation}"
+        prompt = f"This is a chat conversation between a user and a chatbot. Design  code to SEO optimized article . Please give the output in a properly formatted markdown. The conversation is given here {chat_conversation}"
         
         # Prepare the request body
         request_body = {
@@ -48,7 +48,7 @@ def generate_content():
         
         # Make the request
         response = requests.post(
-            f"{endpoint}/models/gemini-pro:generateContent?key={'AIzaSyDFyUhDz-TL8DqpWtHit9Ad2cKL-KzxG5Y'}",
+            f"{endpoint}/models/gemini-pro:generateContent?key={' API key'}",
             json=request_body,
         )
 
